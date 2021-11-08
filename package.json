@@ -1,10 +1,11 @@
 {
-  "name": "pedigree",
-  "version": "0.0.0",
+  "name": "@ancestable/pedigree",
+  "version": "0.0.1",
+  "files": ["/dist/main.js", "/dist/styles.css"],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --output-hashing=none --single-bundle",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -14,6 +15,7 @@
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
+    "@angular/elements": "^13.0.0",
     "@angular/forms": "~12.2.0",
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
@@ -34,6 +36,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ngx-build-plus": "^12.2.0",
     "typescript": "~4.3.5"
   }
 }
