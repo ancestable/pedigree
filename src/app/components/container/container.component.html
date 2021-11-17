@@ -1,0 +1,19 @@
+<div #container class="pedigree-container" (mousemove)="pan($event)" (mousedown)="mouseDown($event)" (mouseup)="mouseUp($event)" >
+  <div *ngIf="pedigree" [ngStyle]="{'transform': transform()}">
+    <ng-container *ngFor="let level of levelArray">
+      <ng-container *ngFor="let itemNumber of itemNumberArray(level)">
+        <div
+          *ngIf="level > 0"
+          [ngClass]="itemNumber%2 ? 'bottomLine' : 'topLine'"
+          [ngStyle]="{'width': levelWidthInPx, 'height': lineHeight(level), 'top': lineTop(level, itemNumber), 'left': lineLeft(level)}"
+        ></div>
+        <app-couple
+          class="couple"
+          [ngStyle]="{'top': top(level, itemNumber), 'left': left(level)}"
+          [fatherIndividualRecord]="individualRecord(level, itemNumber, SEX.Male)"
+          [motherIndividualRecord]="individualRecord(level, itemNumber, SEX.Female)"
+        ></app-couple>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

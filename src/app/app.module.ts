@@ -4,10 +4,16 @@ import { createCustomElement } from '@angular/elements';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ContainerComponent } from './components/container/container.component';
+import { CoupleComponent } from './components/couple/couple.component';
+import { IndividualComponent } from './components/individual/individual.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContainerComponent,
+    CoupleComponent,
+    IndividualComponent
   ],
   imports: [
     BrowserModule,

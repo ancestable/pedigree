@@ -1,0 +1,17 @@
+<div
+  *ngIf="individualRecord; else noEntry"
+  [ngClass]="genderStyle(individualRecord)"
+>
+  <div class="individual-container">
+    <div>
+      {{ givenName }}
+    </div>
+    <div>
+      {{ surName }}
+    </div>
+  </div>
+</div>
+
+<ng-template #noEntry>
+  <div class="noEntry" class="individual-container"></div>
+</ng-template>

@@ -1,16 +1,22 @@
 {
   "name": "@ancestable/pedigree",
-  "version": "0.0.1",
-  "files": ["/dist/main.js", "/dist/styles.css"],
+  "version": "0.0.2",
+  "files": [
+    "/dist/main.js",
+    "/dist/styles.css"
+  ],
+  "main": "dist/main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --output-hashing=none --single-bundle",
     "watch": "ng build --watch --configuration development",
+    "prepare": "npm run build",
     "test": "ng test"
   },
-  "private": true,
   "dependencies": {
+    "@ancestable/gedcom7models": "^1.0.5",
+    "@ancestable/shared": "^1.0.4",
     "@angular/animations": "~12.2.0",
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
